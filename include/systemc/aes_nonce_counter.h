@@ -3,8 +3,8 @@
 SC_MODULE(AES_Nonce_Counter)
 {
   sc_core::sc_in<bool> clock, clear, increment;
-  sc_core::sc_vector<sc_core::sc_in<unsigned char>> original_nc;
-  sc_core::sc_vector<sc_core::sc_out<unsigned char>> current_nc;
+  sc_core::sc_vector<sc_core::sc_in<unsigned char> > original_nc;
+  sc_core::sc_vector<sc_core::sc_out<unsigned char> > current_nc;
 
   void do_nc()
   {

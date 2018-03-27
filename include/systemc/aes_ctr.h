@@ -14,8 +14,8 @@ SC_MODULE(AES_CTR)
   // - Encryption: plaintext
   // - Decryption: ciphertext
   // Nonce Counter will be incremented by 1 inside this module for each encryption
-  sc_core::sc_vector<sc_core::sc_in<unsigned char>> input, nonce_counter, key;
-  sc_core::sc_vector<sc_core::sc_out<unsigned char>> output;
+  sc_core::sc_vector<sc_core::sc_in<unsigned char> > input, nonce_counter, key;
+  sc_core::sc_vector<sc_core::sc_out<unsigned char> > output;
   sc_core::sc_out<bool> done;
 
   // State logic
@@ -24,7 +24,7 @@ SC_MODULE(AES_CTR)
 
   // Internal values
   sc_core::sc_signal<uint32_t> rk0, rk1, rk2, rk3, rk_addr;
-  sc_core::sc_vector<sc_core::sc_signal<unsigned char>> cipher, curr_nc;
+  sc_core::sc_vector<sc_core::sc_signal<unsigned char> > cipher, curr_nc;
 
   // Modules
   AES_RoundKey *roundkey;

@@ -35,9 +35,9 @@ int sc_main(int argc, char* argv[])
   AES_CTR ctr("AES_CTR");
 
   sc_core::sc_signal<bool> clock, start, clear;
-  sc_core::sc_vector<sc_core::sc_signal<unsigned char>> input("AES_input", 16),
+  sc_core::sc_vector<sc_core::sc_signal<unsigned char> > input("AES_input", 16),
       nonce_counter("AES_nonce_counter", 16), key("AES_key", 16);
-  sc_core::sc_vector<sc_core::sc_signal<unsigned char>> output("AES_output", 16);
+  sc_core::sc_vector<sc_core::sc_signal<unsigned char> > output("AES_output", 16);
   sc_core::sc_signal<bool> done;
 
   for (int i = 0; i < 16; i++) {

@@ -47,7 +47,7 @@ SC_MODULE(AES_RoundKey)
 {
   sc_core::sc_in<bool> clock, start, clear;
   sc_core::sc_in<uint32_t> rk_addr;
-  sc_core::sc_vector<sc_core::sc_in<unsigned char>> key;
+  sc_core::sc_vector<sc_core::sc_in<unsigned char> > key;
   sc_core::sc_out<uint32_t> rk0, rk1, rk2, rk3;
   sc_core::sc_out<bool> done;
 
